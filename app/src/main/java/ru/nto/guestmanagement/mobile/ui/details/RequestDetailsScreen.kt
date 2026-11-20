@@ -110,7 +110,7 @@ fun RequestDetailsScreen(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 TextButton(onClick = onBack, modifier = Modifier.testTag(TestIds.DETAILS_BACK)) { Text("Назад") }
                 Text("Заявка", style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f))
-                OutlinedButton(onClick = model::refresh, enabled = !state.loading && !state.cancelling, modifier = Modifier.testTag(TestIds.DETAILS_REFRESH)) {
+                OutlinedButton(onClick = model::refresh, enabled = !state.cancelling, modifier = Modifier.testTag(TestIds.DETAILS_REFRESH)) {
                     Text("Обновить")
                 }
             }
